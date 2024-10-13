@@ -1,0 +1,18 @@
+2024-10-13 16:40:21.862679: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-10-13 16:40:21.886333: I tensorflow/core/common_runtime/process_util.cc:146] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+2024-10-13 16:40:21.895817: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:272] Initialize GrpcChannelCache for job worker -> {0 -> localhost:12345, 1 -> localhost:23456}
+2024-10-13 16:40:21.896126: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:272] Initialize GrpcChannelCache for job worker -> {0 -> localhost:12345, 1 -> localhost:23456}
+2024-10-13 16:40:21.907730: I tensorflow/core/distributed_runtime/rpc/grpc_server_lib.cc:438] Started server with target: grpc://localhost:12345
+2024-10-13 16:40:21.920302: I tensorflow/core/distributed_runtime/coordination/coordination_service.cc:526] /job:worker/replica:0/task:0 has connected to coordination service. Incarnation: 18380401473789728556
+2024-10-13 16:40:21.920671: I tensorflow/core/distributed_runtime/coordination/coordination_service_agent.cc:281] Coordination agent has successfully connected.
+2024-10-13 17:40:22.367856: E tensorflow/core/distributed_runtime/coordination/coordination_service_agent.cc:665] Coordination agent is in ERROR: DEADLINE_EXCEEDED: Barrier timed out. Barrier_id: WaitForAllTasks::4541983278136828191
+Additional GRPC error information from remote target /job:worker/replica:0/task:0:
+:{"created":"@1728821422.366000000","description":"Error received from peer ipv6:[::1]:12345","file":"external/com_github_grpc_grpc/src/core/lib/surface/call.cc","file_line":1056,"grpc_message":"Barrier timed out. Barrier_id: WaitForAllTasks::4541983278136828191","grpc_status":4} [type.googleapis.com/tensorflow.CoordinationServiceError='']
+2024-10-13 17:40:22.368364: E tensorflow/core/common_runtime/base_collective_executor.cc:249] BaseCollectiveExecutor::StartAbort DEADLINE_EXCEEDED: Barrier timed out. Barrier_id: WaitForAllTasks::4541983278136828191
+Additional GRPC error information from remote target /job:worker/replica:0/task:0:
+:{"created":"@1728821422.366000000","description":"Error received from peer ipv6:[::1]:12345","file":"external/com_github_grpc_grpc/src/core/lib/surface/call.cc","file_line":1056,"grpc_message":"Barrier timed out. Barrier_id: WaitForAllTasks::4541983278136828191","grpc_status":4} [type.googleapis.com/tensorflow.CoordinationServiceError='']
+2024-10-13 17:40:22.368389: E tensorflow/core/common_runtime/eager/context_distributed_manager.cc:739] Barrier timed out. Barrier_id: WaitForAllTasks::4541983278136828191
+Additional GRPC error information from remote target /job:worker/replica:0/task:0:
+:{"created":"@1728821422.366000000","description":"Error received from peer ipv6:[::1]:12345","file":"external/com_github_grpc_grpc/src/core/lib/surface/call.cc","file_line":1056,"grpc_message":"Barrier timed out. Barrier_id: WaitForAllTasks::4541983278136828191","grpc_status":4}
+2024-10-13 17:40:22.368402: F tensorflow/core/distributed_runtime/rpc/grpc_server_lib.cc:103] Non-OK-status: Stop() status: UNIMPLEMENTED: Clean shutdown is not currently implemented
